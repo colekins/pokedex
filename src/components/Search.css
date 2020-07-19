@@ -15,6 +15,10 @@
   transition: background-color 0.3s ease;
 }
 
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
 .Search-input:hover,
 .Search-input:active,
 .Search-input:focus {
