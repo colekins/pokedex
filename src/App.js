@@ -13,6 +13,7 @@ class App extends React.Component {
       active: null,
       index: 0,
       searchInput: '',
+      searchResults: [],
     };
   }
 
@@ -23,15 +24,24 @@ class App extends React.Component {
     axios.get(endpoint).then((res) => {
       const pokemon = res.data.results;
       let numberOfPokemon = pokemon.length - 1;
-      let randomizedIndex = Math.floor(Math.random() * numberOfPokemon);
+      let randomIndex = Math.floor(Math.random() * numberOfPokemon);
 
       // Set random pokemon on initial load
       this.setState({
         pokemon,
-        active: pokemon[randomizedIndex],
-        index: randomizedIndex,
+        active: pokemon[randomIndex],
+        index: randomIndex,
       });
     });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.searchInput !== prevState.searchInput) {
+      let searchResults = this.state.pokemon.filter((p) => {
+        return p.name.includes(this.state.searchInput);
+      });
+      this.setState({ searchResults });
+    }
   }
 
   onClickNext = () => {
@@ -68,10 +78,6 @@ class App extends React.Component {
   };
 
   render() {
-    let searchResults = this.state.pokemon.filter((p) => {
-      return p.name.includes(this.state.searchInput);
-    });
-
     // Only render Pokedex component once there is an active Pokemon in state
     return (
       <div className='App'>
@@ -81,7 +87,7 @@ class App extends React.Component {
           onSearchInput={this.onSearchInput}
         />
         <SearchResults
-          results={searchResults}
+          results={this.state.searchResults}
           input={this.state.searchInput}
           onClickSearchResult={this.onClickSearchResult}
         />
