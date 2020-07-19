@@ -38,7 +38,7 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.searchInput !== prevState.searchInput) {
       let searchResults = this.state.pokemon.filter((p) => {
-        return p.name.includes(this.state.searchInput);
+        return p.name.includes(this.state.searchInput.toLowerCase());
       });
       this.setState({ searchResults });
     }
