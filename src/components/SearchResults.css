@@ -9,6 +9,7 @@
   border-bottom-right-radius: 5px;
   background-color: rgba(255, 255, 255, 0.945);
   text-align: left;
+  transition: all 0.3s ease;
 }
 
 .Search-result,
@@ -20,7 +21,6 @@
   text-transform: capitalize;
   cursor: pointer;
   font-weight: 500;
-  transition: all 0.1s ease;
 }
 
 .Search-result-none {
