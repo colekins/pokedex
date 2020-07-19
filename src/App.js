@@ -21,18 +21,23 @@ class App extends React.Component {
     // Get array of all Pokemon names and corresponding urls
     const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=1000';
 
-    axios.get(endpoint).then((res) => {
-      const pokemon = res.data.results;
-      let numberOfPokemon = pokemon.length - 1;
-      let randomIndex = Math.floor(Math.random() * numberOfPokemon);
+    axios
+      .get(endpoint)
+      .then((res) => {
+        const pokemon = res.data.results;
+        let numberOfPokemon = pokemon.length - 1;
+        let randomIndex = Math.floor(Math.random() * numberOfPokemon);
 
-      // Set random pokemon on initial load
-      this.setState({
-        pokemon,
-        active: pokemon[randomIndex],
-        index: randomIndex,
+        // Set random pokemon on initial load
+        this.setState({
+          pokemon,
+          active: pokemon[randomIndex],
+          index: randomIndex,
+        });
+      })
+      .catch((err) => {
+        console.log('There was an error making the request');
       });
-    });
   }
 
   componentDidUpdate(prevProps, prevState) {

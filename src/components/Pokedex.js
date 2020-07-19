@@ -23,9 +23,14 @@ class Pokedex extends React.Component {
   }
 
   fetchPokemonData() {
-    axios.get(this.props.active.url).then((res) => {
-      this.setState({ data: res.data });
-    });
+    axios
+      .get(this.props.active.url)
+      .then((res) => {
+        this.setState({ data: res.data });
+      })
+      .catch((err) => {
+        console.log('There was an error making the request');
+      });
   }
 
   render() {
