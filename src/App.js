@@ -68,7 +68,7 @@ class App extends React.Component {
   };
 
   render() {
-    const searchResults = this.state.pokemon.filter((p) => {
+    let searchResults = this.state.pokemon.filter((p) => {
       return p.name.includes(this.state.searchInput);
     });
 
