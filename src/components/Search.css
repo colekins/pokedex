@@ -1,0 +1,38 @@
+.Search label {
+  margin-right: 1em;
+  font-size: 0.9em;
+}
+
+.Search-input {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+  height: 2.1em;
+  width: 12em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2px;
+  background-color: rgba(255, 255, 255, 0.925);
+  transition: background-color 0.3s ease;
+}
+
+.Search-input:hover,
+.Search-input:active,
+.Search-input:focus {
+  outline: none;
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .Search-row {
+    background-color: #31333b;
+    width: 100vw;
+    height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Search-input {
+    margin-top: 0;
+  }
+}
