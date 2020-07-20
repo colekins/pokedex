@@ -36,7 +36,7 @@ class Pokedex extends React.Component {
   render() {
     return (
       <div className='Pokedex-container'>
-        {this.state.data && (
+        {this.state.data ? (
           <React.Fragment>
             <PokedexImage
               image={this.state.data.sprites.front_default}
@@ -63,6 +63,8 @@ class Pokedex extends React.Component {
               id={this.state.data.id}
             />
           </React.Fragment>
+        ) : (
+          <div className='Pokedex-loading-message'>Loading pokemon...</div>
         )}
       </div>
     );

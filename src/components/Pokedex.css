@@ -67,6 +67,12 @@
   border-radius: 5px;
 }
 
+.Pokedex-loading-message {
+  padding: 5em;
+  font-style: italic;
+  color: rgb(77, 77, 77);
+}
+
 @media only screen and (max-width: 600px) {
   .Pokedex-container {
     margin-top: 5vh;
