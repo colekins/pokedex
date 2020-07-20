@@ -6,8 +6,9 @@
 .Search-input {
   -webkit-appearance: textfield;
   box-sizing: content-box;
-  height: 2.1em;
-  width: 12em;
+  height: 1.7rem;
+  width: 11rem;
+  font-size: 0.9em;
   border: none;
   border-radius: 5px;
   margin-top: 2px;
