@@ -22,6 +22,7 @@ class Pokedex extends React.Component {
     }
   }
 
+  // Get all data for the active Pokemon
   fetchPokemonData() {
     axios
       .get(this.props.active.url)
@@ -33,6 +34,7 @@ class Pokedex extends React.Component {
       });
   }
 
+  // Renders loading message until valid data is returned.
   render() {
     return (
       <div className='Pokedex-container'>

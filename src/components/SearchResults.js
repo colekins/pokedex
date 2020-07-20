@@ -10,11 +10,13 @@ function SearchResults(props) {
     <div
       className={
         'Search-results ' +
+        // Only show search results if there are valid results or if there are no results for the query.
         ((validResults || noResults) && searchIsActive ? 'active' : 'inactive')
       }
     >
       {validResults &&
         props.results.slice(0, 10).map(function (p, i) {
+          // Map top 10 results to divs within the results container.
           return (
             <div
               className='Search-result'
@@ -32,5 +34,3 @@ function SearchResults(props) {
 }
 
 export default SearchResults;
-
-// {props.results[0] ? props.results[0].name : 'hi'}

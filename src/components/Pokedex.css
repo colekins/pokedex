@@ -6,7 +6,7 @@
   padding: 1.2em;
   border-radius: 8px;
   min-width: 18em;
-  min-height: 18em;
+  /* min-height: 18em; */
   margin-bottom: 5em;
 }
 
@@ -70,7 +70,7 @@
 .Pokedex-loading-message {
   padding: 5em;
   font-style: italic;
-  color: rgb(77, 77, 77);
+  color: rgb(97, 97, 97);
 }
 
 @media only screen and (max-width: 600px) {

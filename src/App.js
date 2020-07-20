@@ -17,8 +17,8 @@ class App extends React.Component {
     };
   }
 
+  // Get array of all Pokemon names and corresponding endpoints
   componentDidMount() {
-    // Get array of all Pokemon names and corresponding urls
     const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=1000';
 
     axios
@@ -40,6 +40,7 @@ class App extends React.Component {
       });
   }
 
+  // Refresh searchResults array whenever search input is updated
   componentDidUpdate(prevProps, prevState) {
     if (this.state.searchInput !== prevState.searchInput) {
       let searchResults = this.state.pokemon.filter((p) => {
@@ -70,6 +71,7 @@ class App extends React.Component {
     this.setState({ searchInput: e.target.value });
   };
 
+  // Update state to reflect newly selected Pokemon
   onClickSearchResult = (e) => {
     let pokemonNames = this.state.pokemon.map((p) => p.name);
     let selectedPokemon = e.target.id;
@@ -82,8 +84,8 @@ class App extends React.Component {
     });
   };
 
+  // Only render Pokedex once there is an active Pokemon in state
   render() {
-    // Only render Pokedex component once there is an active Pokemon in state
     return (
       <div className='App'>
         <Header

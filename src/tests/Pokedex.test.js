@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import Pokedex from '../components/Pokedex';
 
@@ -16,7 +15,7 @@ afterEach(() => {
   container = null;
 });
 
-it('renders the empty pokedex container', () => {
+it('renders an empty pokedex container', () => {
   const active = {
     name: 'bulbasaur',
     url: 'https://pokeapi.co/api/v2/pokemon/1/',
