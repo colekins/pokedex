@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom';
-import Pokedex from './Pokedex';
+import Pokedex from '../components/Pokedex';
 
 let container;
 
@@ -29,5 +29,7 @@ it('renders the empty pokedex container', () => {
 
   const pokedexContainer = container.querySelector('.Pokedex-container');
   expect(pokedexContainer).toBeInTheDocument();
-  expect(pokedexContainer.firstChild).toBeNull();
+
+  const loadingMessage = container.querySelector('.Pokedex-loading-message');
+  expect(loadingMessage.textContent).toBe('Loading pokemon...');
 });
