@@ -17,7 +17,7 @@ class App extends React.Component {
     };
   }
 
-  // Get array of all Pokemon names and corresponding endpoints
+  // Get array of all Pokemon names and endpoints
   componentDidMount() {
     const endpoint = 'https://pokeapi.co/api/v2/pokemon?limit=1000';
 
@@ -28,7 +28,7 @@ class App extends React.Component {
         let numberOfPokemon = pokemon.length - 1;
         let randomIndex = Math.floor(Math.random() * numberOfPokemon);
 
-        // Set random pokemon on initial load
+        // Set random Pokemon on initial load
         this.setState({
           pokemon,
           active: pokemon[randomIndex],
@@ -84,7 +84,8 @@ class App extends React.Component {
     });
   };
 
-  // Only render Pokedex once there is an active Pokemon in state
+  // Only render Pokedex once there is an active Pokemon in state.
+  // SearchResults component is hidden by default, via CSS.
   render() {
     return (
       <div className='App'>
