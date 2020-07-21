@@ -17,7 +17,7 @@ class Pokedex extends React.Component {
   }
 
   // Fetch data if a new Pokemon is selected.
-  // Future improvement could fetch Pokemon in batches to reduce successive API calls.
+  // Future iteration could fetch Pokemon in batches to reduce successive API calls.
   componentDidUpdate(prevProps) {
     if (this.props.active.name !== prevProps.active.name) {
       this.fetchPokemonData();
