@@ -16,6 +16,7 @@ class Pokedex extends React.Component {
     this.fetchPokemonData();
   }
 
+  // Fetch data if a new Pokemon is selected
   componentDidUpdate(prevProps) {
     if (this.props.active.name !== prevProps.active.name) {
       this.fetchPokemonData();
@@ -34,7 +35,7 @@ class Pokedex extends React.Component {
       });
   }
 
-  // Renders loading message until valid data is returned.
+  // Renders loading message until valid data is available.
   render() {
     return (
       <div className='Pokedex-container'>

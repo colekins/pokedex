@@ -3,6 +3,7 @@ import './Pokedex.css';
 import fallback from '../assets/default.png';
 
 function PokedexImage(props) {
+  // If there is no image available, a fallback image will be rendered.
   return (
     <div className='Pokedex-image-container'>
       {props.image ? (
@@ -12,11 +13,10 @@ function PokedexImage(props) {
           src={props.image}
         ></img>
       ) : (
-        // If there is no image available, render a fallback image
         <React.Fragment>
           <img
             className='Pokedex-fallback-image'
-            alt={props.active.name + ' sprite'}
+            alt={props.active.name + ' image placeholder'}
             src={fallback}
           ></img>
           <div className='Pokedex-image-subtitle'>No image available</div>
