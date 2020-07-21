@@ -5,8 +5,8 @@ This single page app allows you to browse and view relevant information on all P
 **The live app can be viewed here:**
 [blue-squad-pokedex.netlify.app](https://blue-squad-pokedex.netlify.app/)
 
-To run the app locally, use `npm start`.
-To run the test suites, use `npm test`.
+To run the app locally, use `npm start`.<br />
+To run the test suites, use `npm test`.<br />
 To run a production build, use `npm run build`.
 
 <!-- prettier-ignore -->
