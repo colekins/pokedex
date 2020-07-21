@@ -1,6 +1,6 @@
 ## Pokedex React App
 
-This single page app allows you to browse and view relevant information on all Pokemon. A random Pokemon is loaded upon loading the page. The search field can be utilized to locate specific Pokemon by name.
+This single page app allows you to browse and view relevant information on all Pokemon. A random Pokemon is selected upon loading the page. The search field can be utilized to locate specific Pokemon by name.
 
 **The live app can be viewed here:**
 [pokedex-bs.netlify.app](https://pokedex-bs.netlify.app/)
