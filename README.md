@@ -3,7 +3,7 @@
 This single page app allows you to browse and view relevant information on all Pokemon. A random Pokemon is loaded upon loading the page. The search field can be utilized to locate specific Pokemon by name.
 
 **The live app can be viewed here:**
-[blue-squad-pokedex.netlify.app](https://blue-squad-pokedex.netlify.app/)
+[pokedex-bs.netlify.app](https://pokedex-bs.netlify.app/)
 
 To run the app locally, use `npm start`.<br />
 To run the test suites, use `npm test`.<br />
